@@ -1,0 +1,41 @@
+@import "../../variables.scss";
+
+.cardList {
+  color: $text-colour;
+  font-size: 1.2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4rem 18rem auto auto 2rem;
+  padding: 0.5rem;
+  gap: 1rem;
+  align-items: center;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 1rem;
+    background-color: $tertiary-colour;
+  }
+
+  img {
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 0.7rem;
+  }
+
+  .SongDetails {
+    line-height: 1.4;
+    .SongTitle {
+      font-size: 1.2rem;
+    }
+    .ArtistName {
+      font-weight: 500;
+      color: $text-colour-off;
+    }
+  }
+  .SongPlayed {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+}

@@ -1,0 +1,201 @@
+@import "../../variables.scss";
+
+* {
+  letter-spacing: 0.1rem;
+}
+
+.loginC {
+  color: $text-colour;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(23, 23, 23, 0.847),
+      rgb(28, 28, 28)
+    ),
+    url("../../Assets/bg.jpg") no-repeat center;
+  background-size: cover;
+
+  .loginDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 32rem;
+  }
+
+  .logo {
+    width: 20rem;
+  }
+
+  .loginText {
+    font-size: 3rem;
+    width: 40rem;
+    padding: 6rem 0;
+
+    strong {
+      font-size: 3rem;
+    }
+  }
+
+  .downloadFor {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+    gap: 1rem;
+
+    .downloadIcon {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .playStore,
+    .iOS,
+    .Windows {
+      display: flex;
+      font-size: 4rem;
+      border: 1px solid $text-colour-off;
+      border-radius: 0.5rem;
+      padding: 0.7rem;
+      cursor: pointer;
+    }
+  }
+
+  .LoginHere {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+
+    .Login {
+      color: $text-colour;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1rem 2rem;
+      font-size: 2rem;
+      border-radius: 0.7rem;
+      background-color: #15a2e8;
+      cursor: pointer;
+      .arrowR {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+      width: 30rem;
+      margin-top: 1rem;
+      span {
+        color: $accent-colour;
+      }
+    }
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 6rem 0;
+    color: $text-colour;
+    font-size: 1.4rem;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    .pwd-rst {
+      color: $text-colour-off;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      padding: 1.3rem;
+      border: 1px solid $text-colour-off;
+      border-radius: 0.7rem;
+      font-size: 2rem;
+      input {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+        background: transparent;
+        border: none;
+        color: $text-colour;
+        &::placeholder {
+          color: $text-colour;
+        }
+        &:focus {
+          outline: none;
+          color: $text-colour;
+        }
+      }
+    }
+    button {
+      font-size: 2rem;
+      color: $text-colour;
+      border: none;
+      padding: 1.5rem;
+      border-radius: 0.7rem;
+      background-color: $accent-colour;
+      margin: 2rem 0 1rem 0;
+      cursor: pointer;
+    }
+
+    .f-p {
+      text-decoration: underline;
+      &:hover {
+        color: $accent-colour;
+      }
+    }
+
+    p {
+      width: 100%;
+      span {
+        color: $accent-colour;
+      }
+    }
+  }
+  .continueWith {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    li {
+      width: 6rem;
+      border: 1px solid $text-colour-off;
+    }
+  }
+
+  .socialLogin {
+    display: flex;
+    gap: 1.5rem;
+    place-content: center;
+    .fb {
+      color: #105ca0;
+    }
+    .s_Icon {
+      border: 0.1rem solid $text-colour-off;
+      padding: 1rem;
+      font-size: 5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-device-width: 768px) and (orientation: landscape) {
+  .loginC .loginDiv {
+    gap: 0;
+  }
+  .loginC .continueWith {
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../variables.scss";
+
+.volumeBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2.5rem;
+
+  .volumeBar {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 0.6rem;
+    width: 9rem;
+    border: none;
+    outline: none;
+    accent-color: $accent-colour;
+    border-radius: 0.3rem;
+    &:hover {
+      background-color: $accent-colour;
+    }
+  }
+}

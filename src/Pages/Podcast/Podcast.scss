@@ -1,0 +1,121 @@
+@import "../../variables.scss";
+
+.Podcast {
+  color: $text-colour;
+  background-color: $background-colour;
+  font-size: 1.4rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  ul {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: repeat(8, max-content);
+    li {
+      background-color: $primary-colour;
+      padding: 1rem 2rem;
+      border-radius: 0.7rem;
+
+      &:nth-child(1) {
+        background-color: $accent-colour;
+      }
+    }
+  }
+
+  .Pod {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    gap: 2rem;
+    padding: 0 2rem;
+    transition: scroll 0.5s ease-in-out;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .Main {
+    background-color: $secondary-colour;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    width: 20rem;
+    height: 25rem;
+    object-fit: cover;
+
+    .PlayPodcast {
+      visibility: hidden;
+      border-radius: 50%;
+    }
+
+    &:hover .PlayPodcast {
+      visibility: visible;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      color: $text-colour;
+      background-color: $accent-colour;
+      padding: 0.5rem;
+      font-size: 6rem;
+      left: 50%;
+      top: 50%;
+    }
+
+    &:hover .PlayPodcast:hover {
+      box-shadow: 3px 3px 1.5rem $background-colour;
+      font-size: 7rem;
+      border-radius: 100%;
+      transition: all 0.2s ease-in;
+    }
+
+    .SongDetails {
+      font-size: 1.2rem;
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      border-radius: 0.6rem;
+
+      .ArtistName {
+        font-weight: 500;
+        color: $text-colour-off;
+      }
+    }
+
+    &:hover {
+      background-color: rgb($active-colour, 0.1);
+    }
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Podcast {
+    color: $text-colour;
+    background-color: $background-colour;
+    font-size: 1.4rem;
+    ul {
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      li {
+        flex-wrap: wrap;
+      }
+    }
+
+    .Pod {
+      overflow: auto;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(5, 20rem);
+      gap: 1.5rem;
+      height: 100%;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

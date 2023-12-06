@@ -1,0 +1,417 @@
+@import "../../../variables.scss";
+
+.StatsDiv {
+  color: $text-colour;
+  background-color: $background-colour;
+  font-size: 1.4rem;
+  overflow: hidden;
+  padding: 2rem;
+
+  h3,
+  h4,
+  h5 {
+    font-weight: 500;
+  }
+
+  .StatsTop {
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    .Top-Left {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .StatsTab {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(5, max-content);
+
+        li {
+          line-height: 1.4;
+          background-color: $secondary-colour;
+          padding: 1rem 1.8rem;
+          border-radius: 0.8rem;
+        }
+      }
+
+      .StatsCont {
+        display: flex;
+        gap: 2rem;
+
+        .TopMix {
+          display: flex;
+          flex-direction: column;
+          background-color: $secondary-colour;
+          border-radius: 1rem;
+          height: 30rem;
+          max-width: 100%;
+
+          .MixHeader {
+            border-bottom: 1px solid $active-colour;
+            padding: 2rem;
+          }
+
+          .MixBody {
+            overflow: auto;
+            background-color: #222;
+            border-radius: 0 0 1rem 1rem;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+
+          ul {
+            padding: 1.5rem 0;
+            display: grid;
+            grid-template-columns: 4rem 20rem 4rem;
+            justify-content: center;
+          }
+        }
+      }
+      .FavSong,
+      .FavArtist {
+        display: flex;
+        flex-direction: column;
+        background-color: $secondary-colour;
+        border-radius: 1rem;
+        height: 30rem;
+        align-items: center;
+        justify-content: center;
+        h3 {
+          font-size: 4rem;
+        }
+        h3,
+        p {
+          padding: 0 5rem;
+          text-align: center;
+        }
+      }
+    }
+
+    h5 {
+      color: $text-colour-off;
+    }
+  }
+
+  .globe {
+    position: relative;
+    .TotalUsers,
+    .TotalSongs,
+    .U_Age,
+    .U_Demo {
+      position: absolute;
+      border: 1px solid $active-colour;
+      padding: 1rem 1.5rem;
+      border-radius: 0.7rem;
+      transform: blur(200px);
+    }
+    .TotalUsers {
+      top: 10rem;
+      left: 10rem;
+    }
+    .TotalSongs {
+      top: 15rem;
+      right: 5rem;
+    }
+    .U_Age {
+      bottom: 6rem;
+      right: 10rem;
+    }
+    .U_Demo {
+      bottom: 10rem;
+      left: 4rem;
+    }
+
+    img {
+      width: 35rem;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: screen;
+      filter: hue-rotate(30deg) brightness(2);
+    }
+  }
+
+  .StatsBottom {
+    display: grid;
+    margin-top: 4rem;
+    grid-template-columns: 36% 64%;
+
+    .Bottom-Left {
+      h3 {
+        font-size: 1.6rem;
+      }
+      h4 {
+        color: $text-colour-off;
+        line-height: 2;
+      }
+      .StatsCont {
+        margin-top: 1.5rem;
+        display: flex;
+
+        .BottomSong {
+          display: flex;
+          flex-direction: column;
+          background-color: $secondary-colour;
+          border-radius: 1rem;
+          height: 38rem;
+          max-width: 100%;
+
+          .SongHeader {
+            border-bottom: 1px solid $active-colour;
+            padding: 2rem;
+          }
+
+          .SongBody {
+            overflow: auto;
+            background-color: #222;
+            border-radius: 0 0 1rem 1rem;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+
+          ul {
+            padding: 1.5rem 0;
+            display: grid;
+            grid-template-columns: 4rem 35rem 5rem;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    .Bottom-Right {
+      ul {
+        display: flex;
+        gap: 1.5rem;
+
+        li {
+          background-color: $secondary-colour;
+          padding: 1rem 1.8rem;
+          border-radius: 0.8rem;
+          h2 {
+            line-height: 1.4;
+          }
+        }
+      }
+      .Data {
+        margin-top: 1.5rem;
+        height: 36rem;
+        width: 100%;
+        border-radius: 1rem;
+        background-color: #222;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .StatsDiv {
+    font-size: 1.2rem;
+
+    .StatsTop {
+      grid-template-columns: 55% 45%;
+
+      .Top-Left {
+        gap: 1.5rem;
+        overflow: auto;
+        .StatsTab {
+          li {
+            padding: 1rem 1.4rem;
+          }
+        }
+        .StatsCont {
+          gap: 1.5rem;
+        }
+        .StatsCont {
+          .TopMix {
+            ul {
+              grid-template-columns: 4rem 15rem 4rem;
+            }
+          }
+        }
+      }
+    }
+    .globe {
+      .TotalUsers {
+        top: 9rem;
+        left: 5rem;
+      }
+      .TotalSongs {
+        top: 15rem;
+        right: 0;
+      }
+      .U_Age {
+        bottom: 2rem;
+        right: 4rem;
+      }
+      .U_Demo {
+        bottom: 7rem;
+        left: 4rem;
+      }
+
+      img {
+        left: 50%;
+      }
+    }
+
+    .StatsBottom {
+      grid-template-columns: 40% 60%;
+      .Bottom-Left {
+        h3 {
+          font-size: 1.6rem;
+        }
+
+        .StatsCont {
+          .BottomSong {
+            height: 30rem;
+            width: 95%;
+
+            ul {
+              grid-template-columns: 3rem auto 3rem;
+              justify-content: normal;
+              padding: 1.5rem;
+            }
+          }
+        }
+      }
+
+      .Bottom-Right {
+        width: 100%;
+        ul {
+          margin-bottom: 1.5rem;
+        }
+        .Data {
+          height: 28rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .StatsDiv {
+    .StatsBottom {
+      grid-template-columns: 40% 60%;
+      .Bottom-Left {
+        h3 {
+          font-size: 1.6rem;
+        }
+
+        .StatsCont {
+          .BottomSong {
+            height: 37rem;
+            width: 94%;
+
+            ul {
+              grid-template-columns: 3rem auto 3rem;
+              justify-content: normal;
+              padding: 1.5rem;
+            }
+          }
+        }
+      }
+
+      .Bottom-Right {
+        width: 100%;
+        ul {
+          margin: 1.4rem 0;
+        }
+        .Data {
+          height: 35rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 450px) {
+  .StatsDiv {
+    font-size: 1.4rem;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .StatsTop {
+      grid-template-columns: 1fr;
+
+      .globe {
+        position: relative;
+        height: 40rem;
+
+        .TotalUsers {
+          top: 10rem;
+          left: 5rem;
+        }
+        .TotalSongs {
+          top: 15rem;
+          right: 1rem;
+        }
+        .U_Age {
+          bottom: 6rem;
+          right: 4rem;
+        }
+        .U_Demo {
+          bottom: 10rem;
+          left: 4rem;
+        }
+
+        img {
+          top: 50%;
+        }
+      }
+    }
+
+    .StatsBottom {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      .Bottom-Left {
+        h3 {
+          font-size: 2rem;
+        }
+        h4 {
+          color: $text-colour-off;
+          line-height: 2;
+        }
+        .StatsCont {
+          margin-top: 1.5rem;
+          display: flex;
+          gap: 2rem;
+
+          .BottomSong {
+            width: 100%;
+
+            .SongHeader {
+              border-bottom: 1px solid $active-colour;
+              padding: 2rem;
+            }
+
+            .SongBody {
+              overflow: auto;
+              padding: 0 2rem;
+              background-color: $tertiary-colour;
+              border-radius: 0 0 1rem 1rem;
+              &::-webkit-scrollbar {
+                display: none;
+              }
+            }
+
+            ul {
+              grid-template-columns: 4rem auto 5rem;
+              align-items: center;
+              padding: 2rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

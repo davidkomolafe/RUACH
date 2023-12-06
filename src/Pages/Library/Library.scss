@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+.Library {
+  color: $text-colour;
+  background-color: $background-colour;
+
+  .libraryBar {
+    margin-top: 2rem;
+    text-transform: capitalize;
+  }
+}
+
+.libraryList_ {
+  padding: 1.5rem 2.5rem;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: $text-colour;
+}

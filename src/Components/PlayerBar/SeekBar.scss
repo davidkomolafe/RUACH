@@ -1,0 +1,67 @@
+@import "../../variables.scss";
+
+.playSeek {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+.playIcon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .backwardBtn,
+  .playBtn,
+  .forwardBtn {
+    font-size: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .playBtn {
+    font-size: 3.5rem;
+    transition: all 0.3s ease;
+    color: $text-colour;
+    background-color: $accent-colour;
+    border-radius: 50%;
+    padding: 0.5rem;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.seekContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: $text-colour-off;
+
+  .seekBar {
+    position: relative;
+    border-radius: 0.3rem;
+    &hover {
+      outline: none;
+    }
+  }
+
+  input[type="range"] {
+    height: 0.6rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    accent-color: $accent-colour;
+  }
+
+  input[type="range"]:hover {
+    outline: none;
+  }
+}

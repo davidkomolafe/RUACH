@@ -1,0 +1,60 @@
+@import "../../variables.scss";
+
+.profileDiv {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem 0 1rem;
+  color: $text-colour;
+
+  .profileText {
+    display: grid;
+    justify-items: end;
+    font-size: 1.2rem;
+    .ProfileName {
+      color: $accent-colour;
+      font-size: 1.2rem;
+    }
+    h3 {
+      font-weight: 500;
+    }
+  }
+
+  .UserImg {
+    height: 4rem;
+    border: 0.1rem solid $text-colour-off;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .close {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 2rem;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: $accent-colour;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .profileDiv {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1rem;
+
+    .profileText {
+      display: none;
+    }
+  }
+}

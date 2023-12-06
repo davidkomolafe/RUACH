@@ -1,0 +1,41 @@
+@import "../../variables.scss";
+
+.Play {
+  grid-column: 1/-1;
+}
+
+.playDiv {
+  display: grid;
+  grid-template-columns: 23rem auto 40rem;
+  background-color: $primary-colour;
+  color: $text-colour;
+  height: 100%;
+  border-top: 1px solid $primary-colour;
+}
+
+.navPhone {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .playDiv {
+    grid-template-columns: 20rem auto 35rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Play {
+    grid-column: 2;
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+    width: 100%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .playDiv {
+    display: none;
+  }
+}

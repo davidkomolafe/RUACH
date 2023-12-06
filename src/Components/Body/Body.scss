@@ -1,0 +1,161 @@
+@import "../../variables.scss";
+
+.Body {
+  background-color: $background-colour;
+  color: $text-colour-off;
+  font-size: 1.4rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.recommendDiv {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.recommendMenu,
+.featuredMenu {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  overflow-y: hidden;
+}
+
+.topChartMenu::-webkit-scrollbar,
+.recentlyMenu::-webkit-scrollbar,
+.recommendMenu::-webkit-scrollbar,
+.featuredMenu::-webkit-scrollbar,
+.songsDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.recommendSong {
+  max-width: 17rem;
+  height: 16rem;
+  object-fit: cover;
+
+  &::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    border-radius: 1.5rem;
+    z-index: 0;
+    background: linear-gradient(transparent, black 90%);
+  }
+}
+
+.recommendSong,
+.fList {
+  border-radius: 1.5rem;
+  background-color: $secondary-colour;
+  cursor: pointer;
+  position: relative;
+
+  .PlaySong {
+    visibility: hidden;
+    border-radius: 100%;
+  }
+
+  &:hover .PlaySong {
+    visibility: visible;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: $text-colour;
+    background-color: $accent-colour;
+    font-size: 6rem;
+    left: 50%;
+    top: 50%;
+    padding: 0.5rem;
+    z-index: 10;
+  }
+
+  .PlaySong:hover {
+    box-shadow: 3px 3px 1.5rem $background-colour;
+    font-size: 6.5rem;
+    border-radius: 100%;
+    transition: all 0.2s ease-in;
+  }
+}
+
+.songsDiv {
+  display: grid;
+  width: 100%;
+  padding: 2rem;
+  grid-template-columns: 1fr 1fr 40%;
+  column-gap: 1.5rem;
+}
+
+.topChart,
+.recentlyDiv,
+.featuredDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.topChartMenu,
+.recentlyMenu {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  gap: 0.5rem;
+  height: 28rem;
+}
+
+.featuredArtist {
+  min-width: 15rem;
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .fList {
+    width: 100%;
+    height: 13.5rem;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Body {
+    height: 100%;
+  }
+
+  .songsDiv {
+    display: grid;
+    width: 100%;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5rem;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+
+  .topChart {
+    grid-row: 1/2;
+    width: 40rem;
+  }
+
+  .recentlyDiv {
+    grid-column: 2/-1;
+    width: 40rem;
+  }
+
+  .featuredDiv {
+    grid-column: 1/-1;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+}

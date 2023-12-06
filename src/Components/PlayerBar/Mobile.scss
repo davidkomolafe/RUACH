@@ -1,0 +1,70 @@
+@import "../../variables.scss";
+
+@media screen and (max-width: 450px) {
+  .navPhone {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    color: $text-colour;
+    box-shadow: 0 -0.5px 0.5px $active-colour;
+    position: relative;
+    bottom: 0;
+
+    .mobilePlaying {
+      background-color: $active-colour;
+      display: flex;
+      justify-content: space-between;
+      overflow: auto;
+
+      .songImg {
+        width: 5rem;
+        height: 4rem;
+      }
+
+      .nowPlaying {
+        width: 70%;
+      }
+
+      .Ctrls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        .playBtn {
+          font-size: 2rem;
+        }
+        .heartBtn {
+          font-size: 2rem;
+          color: $accent-colour;
+        }
+      }
+    }
+  }
+
+  .navContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: $secondary-colour;
+    color: $text-colour;
+  }
+
+  .navBar {
+    padding: 2.5rem;
+    width: 100%;
+    font-size: 1.6rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+      color: $accent-colour;
+    }
+
+    &:hover {
+      color: $accent-colour;
+    }
+  }
+}

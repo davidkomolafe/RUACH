@@ -1,0 +1,104 @@
+@import "../variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Urbanist";
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: $text-colour;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  line-height: 1.2;
+  overflow: hidden;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 23rem auto 35rem;
+  grid-template-rows: 9rem auto 8rem;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .main {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20rem auto 30rem;
+    grid-template-rows: 9rem auto 8vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 56%;
+  }
+
+  .main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20rem auto 30rem;
+    grid-template-rows: 8rem auto 8vh;
+  }
+}
+
+@media screen and (min-width: 468px) and (max-width: 921px) {
+  html {
+    font-size: 35%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 0rem 1fr 0rem;
+    grid-template-rows: 8rem auto 15rem;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  html {
+    // font-size: 55%;
+  }
+
+  .main {
+    height: 100vh;
+    overflow: auto;
+  }
+  .Play {
+    height: 8rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 10000;
+    width: 100%;
+  }
+}

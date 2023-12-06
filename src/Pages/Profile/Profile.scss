@@ -1,0 +1,97 @@
+@import "../../variables.scss";
+
+.ProfileSet {
+  position: absolute;
+  top: 180%;
+  right: 1rem;
+  border: 0.1px solid rgb($text-colour-off, 0.2);
+  background-color: $tertiary-colour;
+  width: 35rem;
+  border-radius: 0 0 0 2rem;
+  height: auto;
+
+  .Quotes {
+    .CloseBtn {
+      font-size: 1.6rem;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      margin-bottom: 3rem;
+    }
+    .Header {
+      color: $text-colour-off;
+      font-size: 1.6rem;
+      margin: 2rem 0 0 2rem;
+      gap: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    .dailyQuotes {
+      height: 20rem;
+      p {
+        text-transform: none;
+        font-size: 1.3rem;
+        padding: 1rem 2rem;
+        text-align: justify;
+      }
+    }
+  }
+
+  .list {
+    padding: 1.5rem 2.5rem;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: $text-colour;
+
+    &:active {
+      padding: 1.5rem;
+      background-color: $active-colour;
+      // cursor: pointer;
+      box-shadow: inset 0.3rem 0rem $accent-colour;
+    }
+  }
+
+  .DataSaver {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Toggle {
+      font-size: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .LogoV {
+    margin: 7rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .Rlogo {
+      width: 30%;
+    }
+
+    p {
+      width: 20rem;
+      text-transform: capitalize;
+      text-align: center;
+      color: $text-colour-off;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .ProfileSet .list {
+    padding: 1rem 2rem;
+  }
+  .ProfileSet .LogoV {
+    margin: 4rem 0;
+  }
+}

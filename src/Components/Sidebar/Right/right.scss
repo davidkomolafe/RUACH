@@ -1,0 +1,118 @@
+@import "../../../variables.scss";
+
+.rightS {
+  background-color: $secondary-colour;
+  color: $text-colour;
+  text-transform: uppercase;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1.5rem;
+  width: 100%;
+  grid-template-rows: 38rem 1fr;
+  overflow: auto;
+}
+
+.QueueDiv {
+  color: $text-colour-off;
+  background-color: $secondary-colour;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .QueueMenu,
+  .LyricsMenu {
+    cursor: pointer;
+    border-radius: 1.5rem 1.5rem 0 0;
+    width: 100%;
+    border-bottom: 1px solid #3d3d3d;
+    background-color: $tertiary-colour;
+    font-size: 1.6rem;
+    padding: 2rem;
+  }
+
+  .QueueList {
+    padding: 0.7rem 0;
+    height: 30rem;
+    border-bottom: 1px solid #3d3d3d;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .QueueCard {
+    text-transform: capitalize;
+    color: $text-colour;
+    font-size: 1.2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4rem 16rem auto;
+    padding: 0.5rem;
+    gap: 1rem;
+    align-items: center;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      border-radius: 1rem;
+      background-color: $tertiary-colour;
+    }
+
+    img {
+      width: 100%;
+      height: 3.5rem;
+      border-radius: 0.7rem;
+    }
+    ul {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+
+    .SongDetails {
+      line-height: 1.4;
+      .SongTitle {
+        font-size: 1.2rem;
+      }
+      .ArtistName {
+        font-weight: 500;
+        color: $text-colour-off;
+      }
+    }
+    .SongPlayed {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+  }
+  .close {
+    display: none;
+  }
+  .Lyrics {
+    p {
+      overflow: auto;
+      height: 40rem;
+      padding: 0.7rem 0;
+      font-size: 1.7rem;
+      line-height: 1.5;
+      text-transform: none;
+      text-align: justify;
+      border-bottom: 1px solid #3d3d3d;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .rightS {
+    display: none;
+  }
+}

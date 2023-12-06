@@ -1,0 +1,23 @@
+@import "../../../variables.scss";
+
+.list_ {
+  padding: 1.5rem 2.5rem;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: $text-colour;
+
+  &:hover {
+    padding: 1.5rem;
+    background-color: $active-colour;
+    cursor: pointer;
+    box-shadow: inset 0.3rem 0rem $accent-colour;
+  }
+
+  &.active {
+    background-color: $primary-colour;
+    box-shadow: inset 0.3rem 0rem $accent-colour;
+  }
+}

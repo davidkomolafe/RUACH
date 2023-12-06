@@ -1,0 +1,100 @@
+@import "../../variables.scss";
+
+.searchDiv {
+  border: 0.1px solid rgb($text-colour-off, 0.5);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35rem;
+  padding: 1.5rem;
+  background-color: $active-colour;
+
+  .Input {
+    flex: 0.9;
+    text-align: left;
+    border: none;
+    color: $text-colour;
+    font-size: 1.2rem;
+    background-color: $active-colour;
+    outline: 0;
+
+    &::placeholder {
+      color: $text-colour-off;
+    }
+  }
+
+  .Voice {
+    flex: 0.1;
+    font-size: 1.5rem;
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+
+  .Search {
+    flex: 0.1;
+    font-size: 1.5rem;
+    display: inline-flex;
+  }
+  .close {
+    display: none;
+  }
+  .searchTab {
+    position: absolute;
+    top: 100%;
+    border: 0.1px solid rgb($text-colour-off, 0.2);
+    // background-color: rgb($active-colour, 0.9);
+    background-color: $tertiary-colour;
+    width: 35rem;
+    border-radius: 0 0 1rem 1rem;
+    ul {
+      padding: 1.5rem;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr 1fr;
+      li {
+        padding: 1.5rem;
+        background-color: rgb($accent-colour, 0.9);
+        color: $text-colour;
+        font-size: 1.4rem;
+        border-radius: 0.7rem;
+        cursor: pointer;
+        &:nth-type(even) {
+          background-color: red;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .searchDiv {
+    border-radius: 0.7rem;
+    width: 4rem;
+    z-index: 10;
+    background-color: $tertiary-colour;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+
+    .Input {
+      flex: 0.9;
+      width: 1.5rem;
+      background-color: $tertiary-colour;
+      display: none;
+    }
+
+    .Voice {
+      display: none;
+    }
+    .Search {
+      flex: 1;
+      padding: 0rem;
+      justify-content: center;
+    }
+    .searchTab {
+      right: 0;
+    }
+  }
+}
