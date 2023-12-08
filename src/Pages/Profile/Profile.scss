@@ -21,7 +21,7 @@
     }
     .dailyQuotes {
      padding-bottom: 1.5rem;     
-     border-bottom: 1px solid red; 
+     border-bottom: 0.1px solid rgb($text-colour-off, 0.2); 
       p {
         text-transform: none;
         font-size: 1.3rem;
