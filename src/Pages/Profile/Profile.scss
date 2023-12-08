@@ -11,13 +11,7 @@
   height: auto;
 
   .Quotes {
-    .CloseBtn {
-      font-size: 1.6rem;
-      position: absolute;
-      right: 1rem;
-      top: 1rem;
-      margin-bottom: 3rem;
-    }
+   
     .Header {
       color: $text-colour-off;
       font-size: 1.6rem;
@@ -27,8 +21,7 @@
       align-items: center;
     }
     .dailyQuotes {
-      height: 20rem;
-      p {
+ padding-bottom: 1.5rem;      p {
         text-transform: none;
         font-size: 1.3rem;
         padding: 1rem 2rem;
