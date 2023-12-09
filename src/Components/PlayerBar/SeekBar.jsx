@@ -71,7 +71,7 @@ const SeekBar = () => {
   };
 
   const formatTime = (durationInSeconds) => {
-    let minutes = Math.floor(durationInSeconds / 60);
+    let minutes = Math.floor((durationInSeconds / 60) % 60);
     let seconds = Math.floor(durationInSeconds % 60);
 
     let formattedDuration = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;

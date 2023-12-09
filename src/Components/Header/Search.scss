@@ -70,7 +70,7 @@
 @media screen and (max-width: 450px) {
   .searchDiv {
     border-radius: 0.7rem;
-    width: 4rem;
+    width: 3.8rem;
     z-index: 10;
     background-color: $tertiary-colour;
     align-items: center;
@@ -90,7 +90,7 @@
     }
     .Search {
       flex: 1;
-      padding: 0rem;
+      padding: 0;
       justify-content: center;
     }
     .searchTab {
