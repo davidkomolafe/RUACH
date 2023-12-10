@@ -7,7 +7,7 @@ import { IoMdMic } from "react-icons/io";
 import { MdChevronLeft, MdClose } from "react-icons/md";
 
 const Search = () => {
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
 
   const toGgg = (e) => {
     e.preventDefault();
