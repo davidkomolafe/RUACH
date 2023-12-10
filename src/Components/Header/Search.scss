@@ -41,12 +41,15 @@
   }
   .searchTab {
     position: absolute;
+    height: auto;
     top: 100%;
     border: 0.1px solid rgb($text-colour-off, 0.2);
-    // background-color: rgb($active-colour, 0.9);
     background-color: $tertiary-colour;
     width: 35rem;
     border-radius: 0 0 1rem 1rem;
+    .SearchHeader {
+      display: none;
+    }
     ul {
       padding: 1.5rem;
       display: grid;
@@ -94,7 +97,48 @@
       justify-content: center;
     }
     .searchTab {
-      right: 0;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      left: 0;
+
+      .SearchHeader {
+        width: 100%;
+        padding: 2rem;
+        border-bottom: 0.5px solid #3d3d3d;
+        display: flex;
+        height: 8rem;
+        background-color: $secondary-colour;
+        align-items: center;
+        gap: 1.3rem;
+        .hLeft {
+          flex: 0.95;
+          justify-content: space-between;
+        }
+        .hRight {
+          flex: 0.05;
+        }
+        input {
+          color: $text-colour-off;
+          flex: 0.9;
+          text-align: left;
+          border: none;
+          font-size: 1.2rem;
+          outline: 0;
+          background-color: $tertiary-colour;
+        }
+        span {
+          font-size: 1.5rem;
+          border: 0.1px solid rgb($text-colour-off, 0.5);
+          border-radius: 1rem;
+          display: flex;
+          align-items: center;
+          border: 0.1px solid rgb($text-colour-off, 0.5);
+          border-radius: 0.7rem;
+          background-color: $tertiary-colour;
+          padding: 1rem;
+        }
+      }
     }
   }
 }

@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Search.scss";
 
 import { HiOutlineSearch } from "react-icons/hi";
-import { AiFillAudio } from "react-icons/ai";
+
+import { IoMdMic } from "react-icons/io";
+import { MdChevronLeft, MdClose } from "react-icons/md";
 
 const Search = () => {
+  const [search, setSearch] = useState();
+
   const toGgg = (e) => {
     e.preventDefault();
     document.querySelector(".searchTab").classList.toggle("close");
   };
+
   return (
     <div className="searchDiv">
       <div title="Search" className="Search" onClick={toGgg}>
@@ -26,9 +31,27 @@ const Search = () => {
       />
 
       <div className="Voice">
-        <AiFillAudio />
+        <IoMdMic />
       </div>
+
       <div className="searchTab close">
+        <div className="SearchHeader">
+          <span className="hLeft">
+            <MdChevronLeft onClick={toGgg} />
+
+            <input
+              type="text"
+              autoComplete="off"
+              placeholder="Search"
+              value={search}
+              // onChange={setSearch}
+            />
+            <MdClose onClick={() => setSearch("")} />
+          </span>
+          <span className="hRight">
+            <IoMdMic />
+          </span>
+        </div>
         <ul>
           <li>Arab Worship</li>
           <li>African Worship</li>
