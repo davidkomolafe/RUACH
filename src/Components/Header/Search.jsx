@@ -8,6 +8,10 @@ import { MdChevronLeft, MdClose } from "react-icons/md";
 
 const Search = () => {
   const [search, setSearch] = useState("");
+  const handleChange = (e) => {
+    e.preventDefault();
+    setSearch(e.target.value);
+  };
 
   const toGgg = (e) => {
     e.preventDefault();
@@ -44,7 +48,7 @@ const Search = () => {
               autoComplete="off"
               placeholder="Search"
               value={search}
-              // onChange={setSearch}
+              onChange={handleChange}
             />
             <MdClose onClick={() => setSearch("")} />
           </span>
