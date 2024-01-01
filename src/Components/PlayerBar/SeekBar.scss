@@ -61,7 +61,64 @@
     accent-color: $accent-colour;
   }
 
-  input[type="range"]:hover {
+  input[type="range"]:focus {
     outline: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .playIcon,
+  .seekTime {
+    display: none;
+  }
+  .seekContainer {
+    input[type="range"] {
+      -webkit-appearance: none;
+      outline: none;
+      overflow: hidden;
+      appearance: none;
+      width: 100%;
+      -webkit-transition: 0.2s;
+      transition: opacity 0.2s;
+      height: 0.13rem;
+      position: absolute;
+      top: -2px;
+      left: 0;
+    }
+
+    /* Track: webkit browsers */
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 3px;
+      width: 1px;
+      background: $text-colour-off;
+    }
+
+    /* Track: Mozilla Firefox */
+    input[type="range"]::-moz-range-track {
+      height: 3px;
+      width: 1px;
+      background: $text-colour-off;
+    }
+
+    /* Thumb: webkit */
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 9px;
+      width: 0px;
+      background-color: $accent-colour;
+      box-shadow: -407px 0 0 400px $accent-colour;
+    }
+
+    /* Thumb: Firefox */
+    input[type="range"]::-moz-range-thumb {
+      // height: 15px;
+      // width: 15px;
+      background-color: #fff;
+      border-radius: 50%;
+      // border: 1px solid #f50;
+      /*  slider progress trick  */
+      box-shadow: -407px 0 0 400px #f50;
+    }
   }
 }

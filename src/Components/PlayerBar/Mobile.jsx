@@ -1,6 +1,6 @@
 import React from "react";
 import "./Mobile.scss";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import TrackImg from "../../Assets/track_img.jpg";
 
@@ -14,12 +14,10 @@ import { GoHomeFill } from "react-icons/go";
 import { FaPodcast, FaHeart } from "react-icons/fa";
 import { FaPause, FaPlay } from "react-icons/fa6";
 import { IoLibrary } from "react-icons/io5";
+import SeekBar from "./SeekBar";
 
-const Mobile = (props) => {
-  const location = useLocation();
-
-  const isActive = location.pathname === props.to;
-  const navBar = isActive ? "navBar active" : "navBar";
+const Mobile = () => {
+  const NavBar = ({ isActive }) => (isActive ? "navBar activeBar" : "navBar");
 
   const { masterSong, isPlaying } = useSelector((state) => state.mainSong);
 
@@ -33,6 +31,7 @@ const Mobile = (props) => {
   };
   return (
     <div className="navPhone">
+      <SeekBar />
       <div className="mobilePlaying">
         <div className="playLeft">
           <div className="songImg">
@@ -62,18 +61,18 @@ const Mobile = (props) => {
         </div>
       </div>
       <ul className="navContainer">
-        <Link to="/" className={navBar}>
+        <NavLink to="/" className={NavBar}>
           <GoHomeFill />
           <span className=" Text">Home</span>
-        </Link>
-        <Link to="/podcast" className={navBar}>
+        </NavLink>
+        <NavLink to="/podcast" className={NavBar}>
           <FaPodcast />
           <span className="Text">Podcast</span>
-        </Link>
-        <Link to="/library" className={navBar}>
+        </NavLink>
+        <NavLink to="/library" className={NavBar}>
           <IoLibrary />
           <span className="Text">Library</span>
-        </Link>
+        </NavLink>
       </ul>
     </div>
   );

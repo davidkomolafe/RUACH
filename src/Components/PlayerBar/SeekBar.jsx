@@ -128,7 +128,7 @@ const SeekBar = () => {
           disabled={!masterSong.mp3}
           onChange={changeProgress}
         />
-        <h3 className="SeekTime">{duration}</h3>
+        <h3 className="seekTime">{duration}</h3>
       </div>
     </div>
   );
