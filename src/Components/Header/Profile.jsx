@@ -13,9 +13,7 @@ const Profile = () => {
   onAuthStateChanged(firebaseAuth, (currentUser) => {
     if (currentUser) setUser(currentUser);
     else navigate("/login");
-  });
-
-  
+  }); 
 
   const toGg = (e) => {
     e.preventDefault();

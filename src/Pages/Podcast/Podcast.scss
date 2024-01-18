@@ -26,6 +26,8 @@
   .Pod {
     width: 100%;
     display: flex;
+    justify-content: stretch;
+    // flex-direction: column;
     flex-wrap: wrap;
     overflow: auto;
     gap: 2rem;

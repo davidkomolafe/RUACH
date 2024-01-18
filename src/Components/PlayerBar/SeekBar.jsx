@@ -78,7 +78,6 @@ const SeekBar = () => {
     return formattedDuration;
   };
   const backwardSong = () => {
-    console.log("backward");
     if (masterSong.mp3) {
       masterSong?.mp3?.pause();
       masterSong.mp3.currentTime = 0;
