@@ -1,31 +1,27 @@
 @import "../../variables.scss";
 
-.LiveTab {
-  color: $text-colour;
-  background-color: $background-colour;
-  ul {
-    display: grid;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    grid-template-columns: repeat(8, max-content);
-    li {
-      background-color: $primary-colour;
-      padding: 1rem 2rem;
-      border-radius: 0.7rem;
-
-      &:nth-child(1) {
-        background-color: $accent-colour;
-      }
-    }
-  }
-}
 .LiveDiv {
   width: 30rem;
   height: 15rem;
   position: relative;
   border-radius: 1.5rem;
   object-fit: cover;
-
+  .LiveIcon {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4rem;
+    top: 0.7rem;
+    left: 0.7rem;
+    z-index: 3;
+    font-size: 1rem;
+    background-color: red;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.4rem;
+    border-top-left-radius: 0.7rem;
+    color: $text-colour;
+  }
   .LiveTabDiv {
     display: flex;
     flex-direction: row;
@@ -38,7 +34,7 @@
     overflow: hidden;
     height: 5rem;
     padding: 1rem 2rem;
-    border-radius: 0 0 1.5rem 1.5rem;
+    border-radius: 0 0 2rem 1rem;
     background-color: $secondary-colour;
   }
 
@@ -55,7 +51,7 @@
   .LiveNow {
     display: flex;
     flex-direction: row;
-    gap: 0.7rem;
+    gap: 0.4rem;
     align-items: center;
     color: $accent-colour;
   }

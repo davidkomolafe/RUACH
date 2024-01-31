@@ -1,11 +1,14 @@
 import React from "react";
-import { MdPlayArrow } from "react-icons/md";
+import { MdHeadphones, MdPlayArrow } from "react-icons/md";
 import "./live.scss";
-import { FaPodcast } from "react-icons/fa";
+import { FiRadio } from "react-icons/fi";
 
 const LiveCard = ({ song }) => {
   return (
     <div className="LiveDiv">
+      <div className="LiveIcon">
+        <FiRadio /> <p>LIVE</p>
+      </div>
       <img className="LiveDiv" src={song.img} alt="" />
       <MdPlayArrow className="PlaySong" />
       <div className="LiveTabDiv">
@@ -31,7 +34,7 @@ const LiveCard = ({ song }) => {
           )}
         </div>
         <div className="LiveNow">
-          <FaPodcast size={13} />
+          <MdHeadphones size={13} />
           <p className="LiveCount">{song.live}</p>
         </div>
       </div>
