@@ -1,0 +1,78 @@
+@import "../../variables.scss";
+
+.LiveTab {
+  color: $text-colour;
+  background-color: $background-colour;
+  ul {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    grid-template-columns: repeat(8, max-content);
+    li {
+      background-color: $primary-colour;
+      padding: 1rem 2rem;
+      border-radius: 0.7rem;
+
+      &:nth-child(1) {
+        background-color: $accent-colour;
+      }
+    }
+  }
+}
+.LiveDiv {
+  width: 30rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 1.5rem;
+  object-fit: cover;
+
+  .LiveTabDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+    height: 5rem;
+    padding: 1rem 2rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    background-color: $secondary-colour;
+  }
+
+  .LiveTitle {
+    font-size: 1.4rem;
+    color: $text-colour;
+  }
+
+  .LiveArtist {
+    color: $text-colour-off;
+    font-size: 1.2rem;
+  }
+
+  .LiveNow {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    align-items: center;
+    color: $accent-colour;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .LiveTab {
+    font-size: 1.4rem;
+
+    ul {
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      li {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

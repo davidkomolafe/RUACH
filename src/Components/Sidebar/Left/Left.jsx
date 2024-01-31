@@ -7,14 +7,14 @@ import { BiLogoWindows } from "react-icons/bi";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { BiLogoApple } from "react-icons/bi";
 import { BsPlaystation } from "react-icons/bs";
-import { TbDeviceWatchDown } from "react-icons/tb";
+import { TbDeviceWatchDown, TbMusicStar } from "react-icons/tb";
 import { IoCarSport } from "react-icons/io5";
 
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import { FaPodcast } from "react-icons/fa";
 import { BiSolidPlaylist } from "react-icons/bi";
 import { HiFolderDownload } from "react-icons/hi";
-import { MdHistory } from "react-icons/md";
+import { MdHistory, MdSubscriptions } from "react-icons/md";
 import { IoMdStats } from "react-icons/io";
 
 import { Link } from "react-router-dom";
@@ -46,6 +46,12 @@ const Left = () => {
           icon={<HiFolderDownload />}
         />
         <Library title="history" to="/history" icon={<MdHistory />} />
+        <Library title="artists" to="/artists" icon={<TbMusicStar />} />
+        <Library
+          title="subscriptions"
+          to="/subscriptions"
+          icon={<MdSubscriptions />}
+        />
         <Library title="stats" to="/Stats" icon={<IoMdStats />} />
       </ul>
 

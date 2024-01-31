@@ -49,8 +49,25 @@ const CardSong = ({ song, idx }) => {
           />
         )}
         <div className="songBar">
-          <h3 className="SongTitle">{song.title}</h3>
-          <h4 className="ArtistName">{song.artist}</h4>
+          {song.title ? (
+            <h3 className="SongTitle">
+              {song.title?.length > 19
+                ? `${song.title.slice(0, 19)}...`
+                : song.title}
+            </h3>
+          ) : (
+            <></>
+          )}
+
+          {song.artist ? (
+            <h4 className="ArtistName">
+              {song.artist?.length > 15
+                ? `${song.artist.slice(0, 15)}...`
+                : song.artist}
+            </h4>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     )

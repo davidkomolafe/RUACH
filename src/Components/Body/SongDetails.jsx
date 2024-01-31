@@ -150,3 +150,48 @@ export const cardsData = [
     artist: "Lawrence Oyor, EbukaSongs",
   },
 ];
+
+export const LiveData = [
+  {
+    id: 1,
+    img: "/Assets/img/p2.jpg",
+    title: "Halleluyah Challenge",
+    artist: "Pst Nathaniel Bassey",
+    live: "33.4k",
+  },
+  {
+    id: 2,
+    img: "/Assets/img/p11.jpg",
+    title: "The Outpouring",
+    artist: "Dunsin Oyekan",
+    live: "23.4k",
+  },
+  {
+    id: 3,
+    img: "/Assets/img/p6.jpg",
+    title: "True Worshippers",
+    artist: "Theophilus Sunday",
+    live: "43.4k",
+  },
+  {
+    id: 4,
+    img: "/Assets/img/pray.jpg",
+    title: "Koinonia",
+    artist: "Apst Joshua Selman",
+    live: "113.4k",
+  },
+  {
+    id: 5,
+    img: "/Assets/img/p5.jpg",
+    title: "NSSPD Prayers",
+    artist: "Pst Jerry Eze",
+    live: "73.4k",
+  },
+  {
+    id: 6,
+    img: "/Assets/img/p8.jpg",
+    title: "NLP",
+    artist: "Pst Bolaji Idowu",
+    live: "3.4k",
+  },
+];

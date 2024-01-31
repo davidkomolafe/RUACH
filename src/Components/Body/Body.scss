@@ -11,6 +11,15 @@
     display: none;
   }
 }
+.Live {
+  padding: 2rem;
+  .LiveContainer {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    overflow-y: hidden;
+  }
+}
 
 .recommendDiv {
   padding: 2rem;
@@ -27,6 +36,7 @@
   overflow-y: hidden;
 }
 
+.LiveContainer::-webkit-scrollbar,
 .topChartMenu::-webkit-scrollbar,
 .recentlyMenu::-webkit-scrollbar,
 .recommendMenu::-webkit-scrollbar,
@@ -53,6 +63,7 @@
   }
 }
 
+.LiveDiv,
 .recommendSong,
 .fList {
   border-radius: 1.5rem;

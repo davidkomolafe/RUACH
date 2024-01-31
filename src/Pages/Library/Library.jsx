@@ -6,13 +6,14 @@ import { Link } from "react-router-dom";
 
 import { BiSolidPlaylist } from "react-icons/bi";
 import { HiFolderDownload } from "react-icons/hi";
-import { MdHistory } from "react-icons/md";
+import { MdHistory, MdSubscriptions } from "react-icons/md";
 import { IoMdStats } from "react-icons/io";
 import { IoLibrary } from "react-icons/io5";
 
 import LibraryOption from "./LibraryOption";
 import Left from "../../Components/Sidebar/Left/Left";
 import Right from "../../Components/Sidebar/Right/right";
+import { TbMusicBolt } from "react-icons/tb";
 
 const Library = () => {
   return (
@@ -30,6 +31,12 @@ const Library = () => {
           </Link>
           <Link to={"/history"}>
             <LibraryOption title="history" icon={<MdHistory />} />
+          </Link>
+          <Link to={"/artists"}>
+            <LibraryOption title="artists" icon={<TbMusicBolt />} />
+          </Link>
+          <Link to={"/subscriptions"}>
+            <LibraryOption title="subscription" icon={<MdSubscriptions />} />
           </Link>
           <Link to={"/stats"}>
             <LibraryOption title="stats" icon={<IoMdStats />} />

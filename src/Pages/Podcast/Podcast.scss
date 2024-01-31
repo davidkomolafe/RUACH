@@ -4,34 +4,22 @@
   color: $text-colour;
   background-color: $background-colour;
   font-size: 1.4rem;
+  padding: 2rem;
   overflow-y: auto;
   overflow-x: hidden;
 
-  ul {
-    display: grid;
-    gap: 2rem;
-    padding: 2rem;
-    grid-template-columns: repeat(8, max-content);
-    li {
-      background-color: $primary-colour;
-      padding: 1rem 2rem;
-      border-radius: 0.7rem;
-
-      &:nth-child(1) {
-        background-color: $accent-colour;
-      }
-    }
+  .PodcastTab {
+    color: $text-colour-off;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
-
   .Pod {
     width: 100%;
     display: flex;
-    justify-content: stretch;
-    // flex-direction: column;
     flex-wrap: wrap;
     overflow: auto;
     gap: 2rem;
-    padding: 0 2rem;
     transition: scroll 0.5s ease-in-out;
 
     &::-webkit-scrollbar {
@@ -99,15 +87,6 @@
     color: $text-colour;
     background-color: $background-colour;
     font-size: 1.4rem;
-    ul {
-      overflow: auto;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      li {
-        flex-wrap: wrap;
-      }
-    }
 
     .Pod {
       overflow: auto;

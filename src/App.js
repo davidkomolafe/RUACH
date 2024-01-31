@@ -12,7 +12,9 @@ import Podcast from "./Pages/Podcast/Podcast";
 import Playlist from "./Pages/Library/Playlist/Playlist";
 import Downloads from "./Pages/Library/Downloads/Downloads";
 import History from "./Pages/Library/History/History";
+import Artists from "./Pages/Library/Artists/Artists";
 import Stats from "./Pages/Library/Stats/Stats";
+import Subscriptions from "./Pages/Library/Subscriptions/Subscriptions";
 import SearchPage from "./Pages/Search/SearchPage";
 
 import { Provider } from "react-redux";
@@ -39,6 +41,8 @@ const App = () => {
                 <Route path="/downloads" element={<Downloads />} />
                 <Route path="/history" element={<History />} />
                 <Route path="/search" element={<SearchPage />} />
+                <Route path="/artists" element={<Artists />} />
+                <Route path="/subscriptions" element={<Subscriptions />} />
                 <Route path="/stats" element={<Stats />} />
 
                 {/* <Route path="/songs/:id" element={<SongDetails />} /> */}
