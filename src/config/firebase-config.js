@@ -34,4 +34,5 @@ writeSong();
 
 export const firebaseAuth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
+
 export { app, storage, analytics };

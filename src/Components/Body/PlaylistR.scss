@@ -87,7 +87,8 @@
 
 @media screen and (max-width: 450px) {
   .active:nth-of-type(1),
-  .active:nth-of-type(6),
+  .active:nth-of-type(3),
+  .active:nth-of-type(4),
   .active:nth-of-type(5) {
     display: none;
   }

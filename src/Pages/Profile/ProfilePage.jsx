@@ -7,12 +7,16 @@ import { signOut } from "firebase/auth";
 import {
   FaBible,
   FaLanguage,
-  FaSignOutAlt,
   FaToggleOff,
   FaToggleOn,
   FaUserEdit,
 } from "react-icons/fa";
-import { MdDataSaverOn } from "react-icons/md";
+import {
+  MdDataSaverOn,
+  MdOutlineViewCarousel,
+  MdOutlineTimer,
+  MdLogout,
+} from "react-icons/md";
 // import { BiSolidDonateHeart } from "react-icons/bi";
 
 import Logo from "../../Assets/RuachWeb.png";
@@ -51,6 +55,17 @@ const ProfilePage = () => {
       <ProfileOptions icon={<FaUserEdit />} title="Edit Profile" />
 
       <div className="DataSaver">
+        <ProfileOptions icon={<MdOutlineViewCarousel />} title="Fade" />
+
+        <div onClick={handleClick}>
+          {!dataSaver ? (
+            <FaToggleOff className="Toggle" />
+          ) : (
+            <FaToggleOn className="Toggle" />
+          )}
+        </div>
+      </div>
+      <div className="DataSaver">
         <ProfileOptions icon={<MdDataSaverOn />} title="Data Saver" />
 
         <div onClick={handleClick}>
@@ -61,11 +76,14 @@ const ProfilePage = () => {
           )}
         </div>
       </div>
+      <ProfileOptions icon={<MdOutlineTimer />} title="Timer" />
 
       <ProfileOptions icon={<FaLanguage />} title="Language" />
 
+      <ProfileOptions icon={<FaLanguage />} title="About" />
+
       <div onClick={() => signOut(firebaseAuth)}>
-        <ProfileOptions icon={<FaSignOutAlt />} title="Log Out" />
+        <ProfileOptions icon={<MdLogout />} title="Log Out" />
       </div>
 
       {/* <Link to="/give">

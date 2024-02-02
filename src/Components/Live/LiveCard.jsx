@@ -1,7 +1,8 @@
 import React from "react";
-import { MdHeadphones, MdPlayArrow } from "react-icons/md";
+import { MdPlayArrow } from "react-icons/md";
 import "./live.scss";
 import { FiRadio } from "react-icons/fi";
+import live from "../../Assets/img/live.gif";
 
 const LiveCard = ({ song }) => {
   return (
@@ -34,7 +35,7 @@ const LiveCard = ({ song }) => {
           )}
         </div>
         <div className="LiveNow">
-          <MdHeadphones size={13} />
+          <img alt="live" src={live} className="ImgLive" />
           <p className="LiveCount">{song.live}</p>
         </div>
       </div>

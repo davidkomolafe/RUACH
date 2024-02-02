@@ -13,13 +13,13 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    margin-top: 2rem;
   }
   .Pod {
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    overflow: auto;
-    gap: 2rem;
+    overflow-x: auto;
+    gap: 1.5rem;
+    overflow-y: hidden;
     transition: scroll 0.5s ease-in-out;
 
     &::-webkit-scrollbar {
