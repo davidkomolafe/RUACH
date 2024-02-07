@@ -8,6 +8,7 @@
   font-family: "Urbanist";
   letter-spacing: 0.2rem;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 
   &:link,
   &:visited {
@@ -20,6 +21,7 @@ html {
   scroll-behavior: smooth;
   line-height: 1.2;
   overflow: hidden;
+  font-family: $font-family;
 }
 
 .main {

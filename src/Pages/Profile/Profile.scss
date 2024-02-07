@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   right: 1rem;
-  border: 0.1px solid rgb($text-colour-off, 0.2);
+  border: 0.1rem solid rgb($text-colour-off, 0.2);
   background-color: $tertiary-colour;
   width: 35rem;
   border-radius: 0 0 0 2rem;
@@ -14,12 +14,14 @@
 
   .profile-close {
     position: absolute;
-    right: 5px;
-    top: -5px;
-    padding: 4px;
+    right: 0.5rem;
+    top: -0.5rem;
+    padding: 0.4rem;
     color: $text-colour;
     background-color: $accent-colour;
     cursor: pointer;
+    width: 3rem;
+    height: 3rem;
   }
   .Quotes {
     .Header {
@@ -32,7 +34,7 @@
     }
     .dailyQuotes {
       padding: 1rem 0 1.5rem;
-      border-bottom: 0.1px solid rgb($text-colour-off, 0.2);
+      border-bottom: 0.1rem solid rgb($text-colour-off, 0.2);
       p {
         text-transform: none;
         font-size: 1.3rem;

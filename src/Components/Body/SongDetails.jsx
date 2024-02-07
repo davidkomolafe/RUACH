@@ -156,7 +156,7 @@ export const LiveData = [
     id: 1,
     img: "/Assets/img/p2.jpg",
     title: "Halleluyah Challenge",
-    artist: "Pst Nathaniel Bassey",
+    artist: "NathanielBlow",
     live: "33.4k",
   },
   {

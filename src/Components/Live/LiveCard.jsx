@@ -8,11 +8,12 @@ const LiveCard = ({ song }) => {
   return (
     <div className="LiveDiv">
       <div className="LiveIcon">
-        <FiRadio /> <p>LIVE</p>
+        <FiRadio className="RadioIcon" /> <p>LIVE</p>
       </div>
       <img className="LiveDiv" src={song.img} alt="" />
       <MdPlayArrow className="PlaySong" />
       <div className="LiveTabDiv">
+        <img className="profImg" src={song.img} alt="" />
         <div className="LiveBar">
           {song.title ? (
             <h3 className="LiveTitle">

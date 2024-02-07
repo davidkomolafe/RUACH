@@ -55,7 +55,7 @@
     }
 
     .PlaylistBar {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       position: absolute;
       bottom: 1.5rem;
       left: 2rem;
@@ -63,9 +63,8 @@
       z-index: 1;
 
       .PlaylistTagName {
-        margin-top: 0.5rem;
+        margin-top: 0.4rem;
         font-weight: 500;
-        font-size: 1rem;
         color: $text-colour-off;
       }
     }
