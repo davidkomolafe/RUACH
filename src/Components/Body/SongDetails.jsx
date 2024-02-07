@@ -154,7 +154,7 @@ export const cardsData = [
 export const LiveData = [
   {
     id: 1,
-    img: "/Assets/img/p2.jpg",
+    img: "/Assets/img/zz.jpg",
     title: "Halleluyah Challenge",
     artist: "NathanielBlow",
     live: "33.4k",
@@ -168,14 +168,14 @@ export const LiveData = [
   },
   {
     id: 3,
-    img: "/Assets/img/p6.jpg",
+    img: "/Assets/img/yy.jpg",
     title: "True Worshippers",
     artist: "Theophilus Sunday",
     live: "43.4k",
   },
   {
     id: 4,
-    img: "/Assets/img/pray.jpg",
+    img: "/Assets/img/cc.jpg",
     title: "Koinonia",
     artist: "Apst Joshua Selman",
     live: "113.4k",
@@ -189,7 +189,7 @@ export const LiveData = [
   },
   {
     id: 6,
-    img: "/Assets/img/p8.jpg",
+    img: "/Assets/img/aa.jpg",
     title: "NLP",
     artist: "Pst Bolaji Idowu",
     live: "3.4k",
