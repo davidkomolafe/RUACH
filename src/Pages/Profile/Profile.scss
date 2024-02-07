@@ -2,14 +2,25 @@
 
 .ProfileSet {
   position: absolute;
-  top: 180%;
+  top: 0;
   right: 1rem;
   border: 0.1px solid rgb($text-colour-off, 0.2);
   background-color: $tertiary-colour;
   width: 35rem;
   border-radius: 0 0 0 2rem;
   height: auto;
+  padding-bottom: 1rem;
+  z-index: 10;
 
+  .profile-close {
+    position: absolute;
+    right: 5px;
+    top: -5px;
+    padding: 4px;
+    color: $text-colour;
+    background-color: $accent-colour;
+    cursor: pointer;
+  }
   .Quotes {
     .Header {
       color: $text-colour-off;

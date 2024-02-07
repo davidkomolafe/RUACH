@@ -16,10 +16,11 @@ import {
   MdOutlineViewCarousel,
   MdOutlineTimer,
   MdLogout,
+  MdClose,
 } from "react-icons/md";
 // import { BiSolidDonateHeart } from "react-icons/bi";
 
-import Logo from "../../Assets/RuachWeb.png";
+// import Logo from "../../Assets/RuachWeb.png";
 
 const ProfilePage = () => {
   const [dataSaver, setDataSaver] = useState(false);
@@ -27,8 +28,14 @@ const ProfilePage = () => {
     setDataSaver(!dataSaver);
   };
 
+  const toGg = (e) => {
+    e.preventDefault();
+    document.querySelector(".ProfileSet").classList.add("close");
+  };
+
   return (
     <div className="ProfileSet close">
+      <MdClose onClick={toGg} size={20} className="profile-close" />
       <div className="Quotes">
         <div className="Header">
           <FaBible />
@@ -90,13 +97,13 @@ const ProfilePage = () => {
         <ProfileOptions icon={<BiSolidDonateHeart />} title="Support Us" />
       </Link> */}
 
-      <div className="LogoV">
+      {/* <div className="LogoV">
         <img className="Rlogo" src={Logo} alt="" />
         <p>
           Every <strong>Tribe,</strong> Every <strong>Tongue,</strong> Every
           <strong> Nation,</strong> Everywhere..
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
