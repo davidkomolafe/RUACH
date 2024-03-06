@@ -2,7 +2,7 @@ import React from "react";
 import { MdPlayArrow } from "react-icons/md";
 import "./live.scss";
 import { FiRadio } from "react-icons/fi";
-import live from "../../Assets/img/live.gif";
+import live from "../../Assets/img/live.svg";
 
 const LiveCard = ({ song }) => {
   return (

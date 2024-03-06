@@ -57,7 +57,7 @@
     content: attr(data-title);
     color: $text-colour;
     background-color: $tertiary-colour;
-    border: 0.1px solid rgb($text-colour-off, 0.2);
+    border: 0.1rem solid rgb($text-colour-off, 0.2);
     position: absolute;
     border-radius: 0.5rem;
     font-size: 1.2rem;
@@ -81,7 +81,7 @@
     cursor: pointer;
 
     &:hover {
-      border: 1px solid $text-colour;
+      border: 0.1rem solid $text-colour;
     }
   }
 }
