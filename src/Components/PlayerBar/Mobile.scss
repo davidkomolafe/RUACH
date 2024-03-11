@@ -6,12 +6,12 @@
     grid-template-columns: 1fr;
     height: 100%;
     color: $text-colour;
-    box-shadow: 0 -0.5rem 0.5rem $active-colour;
+    box-shadow: 0 -0.5rem 0.5rem $primary-colour;
     position: relative;
     bottom: 0;
 
     .mobilePlaying {
-      background-color: $active-colour;
+      background-color: $primary-colour;
       display: flex;
       justify-content: space-between;
       overflow: auto;

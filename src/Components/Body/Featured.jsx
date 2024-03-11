@@ -4,7 +4,7 @@ import CardFeaturedArtist from "../Cards/CardFeaturedArtist";
 const Featured = () => {
   return (
     <div className="featuredDiv">
-      <h3>YOU'D LIKE</h3>
+      <h3>POPULAR MIXES</h3>
       <div className="featuredMenu">
         <div className="featuredArtist">
           <CardFeaturedArtist />
