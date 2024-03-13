@@ -159,7 +159,7 @@
 
 @media screen and (max-width: 1024px) {
   .Body {
-    height: 100vh;
+    height: 100%;
   }
 
   .songsDiv {
@@ -189,4 +189,7 @@
 }
 
 @media screen and (max-width: 450px) {
+  .Body {
+    height: 100vh;
+  }
 }
