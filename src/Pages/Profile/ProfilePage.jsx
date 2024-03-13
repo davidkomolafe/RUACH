@@ -45,9 +45,8 @@ const ProfilePage = () => {
           <p>
             Psa 27:11 Teach me thy way, O LORD, and lead me in a plain path,
             because of mine enemies.
-          </p>{" "}
+          </p>
           <p>
-            {" "}
             Psa 27:12 Deliver me not over unto the will of mine enemies: for
             false witnesses are risen up against me, and such as breathe out
             cruelty.
@@ -92,18 +91,6 @@ const ProfilePage = () => {
       <div onClick={() => signOut(firebaseAuth)}>
         <ProfileOptions icon={<MdLogout />} title="Log Out" />
       </div>
-
-      {/* <Link to="/give">
-        <ProfileOptions icon={<BiSolidDonateHeart />} title="Support Us" />
-      </Link> */}
-
-      {/* <div className="LogoV">
-        <img className="Rlogo" src={Logo} alt="" />
-        <p>
-          Every <strong>Tribe,</strong> Every <strong>Tongue,</strong> Every
-          <strong> Nation,</strong> Everywhere..
-        </p>
-      </div> */}
     </div>
   );
 };

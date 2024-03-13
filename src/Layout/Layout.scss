@@ -29,7 +29,7 @@ html {
   width: 100%;
   display: grid;
   grid-template-columns: 23rem auto 35rem;
-  grid-template-rows: 9rem auto 8rem;
+  grid-template-rows: 9rem auto auto;
 }
 
 @media screen and (max-width: 1200px) {
@@ -42,7 +42,7 @@ html {
     width: 100%;
     display: grid;
     grid-template-columns: 20rem auto 30rem;
-    grid-template-rows: 9rem auto 8vh;
+    grid-template-rows: 9rem auto auto;
   }
 }
 
@@ -55,7 +55,7 @@ html {
     height: 100vh;
     display: grid;
     grid-template-columns: 20rem auto 30rem;
-    grid-template-rows: 8rem auto 8vh;
+    grid-template-rows: 8rem auto auto;
   }
 }
 
@@ -73,7 +73,7 @@ html {
   .main {
     display: grid;
     grid-template-columns: 0rem 1fr 0rem;
-    grid-template-rows: 8rem auto 15rem;
+    grid-template-rows: 8rem auto 1fr;
     overflow: auto;
     &::-webkit-scrollbar {
       display: none;
